@@ -1,5 +1,19 @@
-<div class="box form-check d-flex align-items-center">
-    <input type="checkbox" class="checkbox" id="exampleCheck1" (click)="niki()">
-    <input type="text" class="text-input" placeholder="type your list">
-    <button class="delete">x</button>
+<div class="box">
+    <div class="col-md-4">
+        <mat-card class="demo-inline-calendar-card">
+            <mat-calendar [(selected)]="selected"></mat-calendar>
+        </mat-card>
+    </div>
+    <div class="col-md-8">
+        <h2>Selected date: {{ selected ? selected.toDateString() : 'No date selected' }}</h2>
+        <div class="box form-check d-flex .flex-column align-items-center">
+            <input type="checkbox" class="checkbox" id="exampleCheck1" (click)="niki()">
+            <input type="text" class="text-input" placeholder="type your list item">
+            <button class="delete">x</button>
+        </div>
+      </div>
 </div>
+
+
+
+

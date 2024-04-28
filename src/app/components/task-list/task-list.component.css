@@ -1,6 +1,6 @@
 .box {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .checkbox {
@@ -9,7 +9,7 @@
 }
 
 .text-input {
-    margin-left: 1em;
+    margin-left: 0.5em;
     height: 30px;
     max-width: 400px;
     width: 400px;
@@ -24,7 +24,7 @@
     height: 30px;
     width: 30px;
     border-radius: 2px;
-    margin-left: 1em;
+    margin-left: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
