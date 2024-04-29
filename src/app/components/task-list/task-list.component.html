@@ -11,13 +11,8 @@
         </div>
     </div>
     <div class="col-md-8">
-        <h3>Selected date: {{ selected ? selected.toDateString() : 'No date selected' }}</h3>
-        <div class="box form-check d-flex .flex-column align-items-center mb-2">
-            <input type="checkbox" class="checkbox" id="exampleCheck1" (click)="checkBoxChange()">
-            <input type="text" class="text-input" placeholder="Type your list item">
-            <button class="delete" (click)='deleteItem()'>x</button>
-            <button class="add" (click)='addItem()'>+</button>
-        </div>
+        <h3><b>Selected date: {{ selected ? selected.toDateString() : 'No date selected' }}</b></h3>
+        <app-checkbox-list></app-checkbox-list>
       </div>
 </div>
 
