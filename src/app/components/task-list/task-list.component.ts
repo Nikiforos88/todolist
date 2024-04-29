@@ -12,11 +12,16 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   styleUrl: './task-list.component.css'
 })
 export class TaskListComponent {
-
-
-  niki() {
+  checkBoxChange() {
     console.log('works');
-    console.log(this.selected);
+  }
+
+  deleteItem() {
+    console.log('delete element')
+  }
+
+  addItem() {
+    console.log('add new element')
   }
 
   selected!: Date | null;

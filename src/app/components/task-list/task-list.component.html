@@ -1,15 +1,22 @@
 <div class="box">
     <div class="col-md-4">
+        <h3><b>Explore by Date:</b></h3>
         <mat-card class="demo-inline-calendar-card">
             <mat-calendar [(selected)]="selected"></mat-calendar>
         </mat-card>
+
+        <div class="search-bar">
+            <h3><b>Explore by Content:</b></h3>
+            <input type="text" placeholder="" class="input-search-bar">
+        </div>
     </div>
     <div class="col-md-8">
-        <h2>Selected date: {{ selected ? selected.toDateString() : 'No date selected' }}</h2>
-        <div class="box form-check d-flex .flex-column align-items-center">
-            <input type="checkbox" class="checkbox" id="exampleCheck1" (click)="niki()">
-            <input type="text" class="text-input" placeholder="type your list item">
-            <button class="delete">x</button>
+        <h3>Selected date: {{ selected ? selected.toDateString() : 'No date selected' }}</h3>
+        <div class="box form-check d-flex .flex-column align-items-center mb-2">
+            <input type="checkbox" class="checkbox" id="exampleCheck1" (click)="checkBoxChange()">
+            <input type="text" class="text-input" placeholder="Type your list item">
+            <button class="delete" (click)='deleteItem()'>x</button>
+            <button class="add" (click)='addItem()'>+</button>
         </div>
       </div>
 </div>
