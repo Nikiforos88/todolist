@@ -1,13 +1,3 @@
-@media (max-width: 768px) {
-    .m-3.w-100.d-flex.justify-content-between {
-      flex-direction: column;
-    }
-  
-    .col-md-6 {
-      width: 100%;
-    }
-}
-
 .btns-div {
   display: flex;
   justify-content: center;

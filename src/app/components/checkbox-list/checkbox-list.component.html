@@ -1,7 +1,16 @@
-<div class="box form-check d-flex .flex-column align-items-center mb-2">
-    <button>done</button>
-    <input type="text" class="text-input" placeholder="Type your list item">
-    <!-- <input type="checkbox" class="checkbox" id="exampleCheck1" (click)="checkBoxChange()"> -->
-    <button class="delete" (click)='deleteItem()'>x</button>
-    <button class="add" (click)='addItem()'>+</button>
+<div class="d-flex .flex-column mb-2">
+    <input type="text" class="text-input" [(ngModel)]="receivedValue"/>   
+    <button type="button" class="add-button" (click)="add()">+</button>
 </div>
+
+@if(isEmpty === false) {
+    <span class="ml-2">No tasks for today</span>
+} @else {
+    <div class="component" *ngFor="let task of taskList; let i = index">
+        <div class="checkbox-wrapper">
+            <input type="checkbox" id="entry-checkbox{{i}}" [checked]="task.isChecked" (change)="toggleCheckbox(i)">
+            <label class="text" for="entry-checkbox{{i}}" [ngClass]="{'strikethrough': task.isChecked}">{{ task.name }}</label>
+        </div>
+        <button class="delete-btn" (click)="deleteEntry(i)">delete</button>
+    </div>
+}
